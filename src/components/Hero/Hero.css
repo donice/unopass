@@ -1,0 +1,134 @@
+body {
+    background-color: #0572EC;
+    color: #fff;
+}
+
+.Hero--section {
+    padding: 0px 40px 0px 80px;
+    max-width: 2000px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Hero--info {
+    margin-top: 60px;
+}
+
+.Hero--info h1{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 65px;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+.Hero--info p {
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+.Hero--btn {
+    margin-top: 30px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Hero--btn button {
+    width: 165px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.join {
+    background-color: #16436c;
+    color: white;
+}
+
+.signin {
+    color: #16436c;
+}
+
+.Hero--section img {
+    width: 550px;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .Hero--section {
+        padding: 10px 20px ;
+        max-width: 2000px;
+        margin-top: auto;
+        /* border: 1px solid red; */
+    }
+
+    .Hero--info {
+        margin-top: 30px;
+    }
+    
+    .Hero--info h1{
+        font-size: 35px;
+        line-height: 45px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .Hero--info p {
+        font-size: 13px;
+        line-height: 25px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .Hero--section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Hero--section img {
+        margin-top: 20px;
+        width: 400px;
+    }
+
+    .Hero--btn {
+        margin-top: 10px;
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    
+    .Hero--btn button {
+        width: 165px;
+        height: 40px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 10px;
+    }
+    
+    .join {
+        background-color: #16436c;
+        color: white;
+    }
+    
+    .signin {
+        color: #16436c;
+    }
+    
+
+}
