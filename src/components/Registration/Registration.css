@@ -1,0 +1,128 @@
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+.Registration--navbar {
+    /* background-color: #0572ec; */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    flex-direction: row;
+    /* border: 1px solid red; */
+}
+
+.Registration--navbar img{
+    width: 150px;
+    cursor: pointer;
+}
+
+.Registration--navbar button {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.Registration--btn {
+    background-color: white;
+    border: 1px solid white;
+    color: #0572ec;
+    box-shadow: 1px 1px 10px 1px rgb(224, 223, 223);
+}
+
+.Registration--btn:hover {
+    background-color: #0a7800;
+    color: #fff;
+    border: 1px solid #0a7800;
+}
+
+.Registration {
+    /* border: 1px solid red; */
+    display: flex;
+    background-color: #f7f7f7;
+    color: #000;
+}
+
+.Registration-side-bar {
+    width: 400px;
+    height: 110vh;
+    background-color: #0572ec;
+}
+
+.Registration-side-bar img {
+    width: 150px;
+    padding: 15px 20px;
+}
+
+.Registration-side-bar h1 {
+    /* border: 1px solid red ; */
+    padding: 0px 50px;
+    font-size: 70px;
+    font-weight: 900;
+    color: #16436c;
+    -webkit-text-stroke: 4px #16436c;
+    line-height: 70px;
+    margin: 30px 0 0 0;
+}
+
+.Registration-side-bar p {
+    /* border: 1px solid red ; */
+    padding: 0px 50px;
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    line-height: 15px;
+}
+
+.Registration--form {
+    margin: auto;
+    /* border: 1px solid red; */
+    padding: 20px;
+}
+
+.Registration--form h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.Registration--form-area {
+    background-color: white;
+    padding: 10px 30px 30px 30px; 
+    border-radius: 10px;
+    box-shadow: 1px 10px 10px 1px rgb(224, 223, 223);
+}
+
+.Registration--form-area input {
+    width: 400px;
+    height: 35px;
+    border: 1px solid #dfdddd;
+    border-radius: 5px;
+    margin: 5px auto;
+    padding: 0px 10px;
+}
+
+.Registration--form-area input:hover {
+    border: 1px solid #0572ec;
+    box-shadow: 1px 1px 10px 1px rgb(211, 209, 209);
+}
+
+.Registration--form-area label {
+   text-align: left;
+}
+
+.Registration--form-area .submit {
+    background-color: #0572ec;
+    width: 420px;
+    height: 40px;
+    color: white;
+    border-radius: 50px;
+}
+
+.Registration--form-area p {
+    text-align: center;
+}

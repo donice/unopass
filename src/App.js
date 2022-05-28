@@ -1,9 +1,15 @@
 import './App.css';
-import Hero from './components/Hero//Hero.js'
+// import Hero from './components/Hero//Hero.js'
+import Registration from './components/Registration/Registration'
+import SignIn from './components/Sign-in/Sign-in';
 
 function App() {
   return (
-    <Hero />
+    <div>
+      {/* <Hero /> */}
+      {/* <Registration /> */}
+      <SignIn />
+    </div>
   );
 }
 
