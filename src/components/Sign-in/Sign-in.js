@@ -21,7 +21,7 @@ const SignIn = () => {
                 </div>
                 <div className='SignIn--form'>
                     <nav className='SignIn--navbar' >   
-                    <img src={Favicon} alt='favicon' className='SignIn-navbar--favicon' />
+                        <img src={Favicon} alt='favicon' className='SignIn-navbar--favicon' />
                         <img src={Logo} alt='logo' className='SignIn--navbar--logo' />
                         <div>
                             <button className='SignIn--btn'>Register</button>
