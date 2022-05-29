@@ -7,8 +7,10 @@ const Dashboard = () => {
     return (
         <section className='Dashboard' >
             <Navbar />
-            <SideNav />
-            <Items />
+            <main>
+                <SideNav />
+                <Items />
+            </main>            
         </section>
     )
 }

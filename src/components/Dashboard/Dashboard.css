@@ -111,6 +111,14 @@ hr {
     background-color: white;
     text-align: left;
 }
+.Dashboard main {
+    display: flex;
+}
+
+.Dashboard h1 {
+    font-size: 100PX;
+    color: #012241;
+}
 
 .unused-fas {
     display: none;
