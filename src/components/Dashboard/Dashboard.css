@@ -1,0 +1,118 @@
+/* horizontal nav  */
+.Dashboard--navbar {
+    background-color: #012241;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    box-shadow: 1px 1px 6px 1px #012241;
+}
+
+.Dashboard--navbar img{
+    width: 150px;
+    cursor: pointer;
+}
+
+.Dashboard--navbar input {
+    width: 520px;
+    min-width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0px 10px;
+    margin: 0px 10px;
+}
+
+.Dashboard--navbar button {
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.addItem-btn {
+    background-color: #0572ec;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.addItem-btn i {
+    font-size: 11px;
+    padding-right: 4px;
+}
+
+.addItem-btn:hover {
+    background-color: #0a7800;
+    color: #fff;
+    border: 1px solid #0a7800;
+}
+/* ----- */
+
+/* Side Nav */
+
+.Dashboard--nav {
+    background-color: #16436c;
+    margin: 0;
+    color: white;
+    border: 1px solid transparent;
+    width: 250px;
+    height: 90vh;
+    box-shadow: 1px 1px 10px 1px rgb(120, 117, 117);
+}
+
+.Dashboard--nav--info {
+    margin: 0;
+}
+
+.Dashboard--nav--info p {
+    font-size: 10px;
+    font-weight: 900;
+    padding: 0 30px;
+    width: 84%;
+    letter-spacing: 3px;
+    color: #ffaa05;
+
+    /* border-radius: 5px; */
+}
+
+.Dashboard--nav--info .fas {
+    font-size: 15px;
+    font-weight: 100;
+    padding: 15px 30px;
+    width: 75%;
+    /* border-radius: 5px; */
+}
+
+.Dashboard--nav--info .fas:hover {
+    background-color: #012241;
+    /* border-radius: 10px 0px 0px 10px; */
+}
+
+.Dashboard--nav--info .fas a {
+    font-weight: 700;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    /* color: #16436c; */
+} 
+
+hr {
+    font-weight: 100;
+    border: 0.1px solid rgb(147, 147, 149);
+    margin-top: 70px;
+}
+
+/* Side Nav  */
+
+.Dashboard {
+    background-color: white;
+    text-align: left;
+}
+
+.unused-fas {
+    display: none;
+}
+
