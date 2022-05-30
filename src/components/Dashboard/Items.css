@@ -1,0 +1,57 @@
+.Dashboard {
+    background-color: white;
+    text-align: left;
+    color: #2b2b2b;
+}
+.Dashboard main {
+    display: flex;
+    flex-direction: row;
+}
+
+.Dashboard--items {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.Dashboard--items div {
+    /* border: 1px solid red;  */
+    padding: 10px 10px;
+
+}
+.Dashboard h1 {
+    font-size: 25px;
+    color: #2b2b2b;
+    margin: 0;
+    Padding: 0;
+}
+
+
+/* Tabs  */
+.Dashboard--items-tabs {
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    padding: 0;
+}
+
+.Dashboard--items-tabs section {
+    background-color: azure;
+    height: 100vh;
+    width: 36vw;;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/* Expanded Tabs */
+.Dashboard--items-expand {
+    background-color: wheat;
+    width: 55%;
+}
+
+

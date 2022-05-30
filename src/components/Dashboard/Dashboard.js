@@ -10,6 +10,7 @@ const Dashboard = () => {
             <main>
                 <SideNav />
                 <Items />
+                
             </main>            
         </section>
     )
