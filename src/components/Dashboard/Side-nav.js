@@ -1,12 +1,13 @@
 import './Dashboard.css'
 
-const SideNav = () => {
+const SideNav = (props) => {
     return (
         <nav className='Dashboard--nav'>
             <div className='Dashboard--nav--info'>
 
             {/* <i class="fas fa-arrow-to-right"><span></span></i> */}
             <i class="fas fa-arrow-to-left"><span></span></i>
+            <h4> {props.userName} </h4>
 
             <p>GENERAL</p>
             <i  class="fas fa-home"><a href='#'>Home</a ></i><br />
