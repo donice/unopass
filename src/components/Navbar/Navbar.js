@@ -1,5 +1,6 @@
 import './Navbar.css'
 import Logo from '../../static/images/unopass-logo.png'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -7,8 +8,8 @@ const Navbar = () => {
         <div className='navbar' >
                 <img src={Logo} alt='logo' className='navbar--logo' />
                 <nav>
-                    <button className='signin-btn'>Sign in</button>
-                    <button className='register-btn'>Register</button>
+                    <Link to='/signin'><button className='signin-btn'>Sign In</button></Link> 
+                    <Link to='/register'><button className='register-btn'>Register</button></Link>
                 </nav>
         </div>
     )

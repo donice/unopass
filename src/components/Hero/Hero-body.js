@@ -1,5 +1,6 @@
 import './Hero.css'
 import FrontImage from '../../static/images/Secure-data-amico.png'
+import { Link } from 'react-router-dom'
 
 const Body = () => {
     return (
@@ -15,8 +16,8 @@ const Body = () => {
                     easily with a single click 
                 </p>
                 <div className='Hero--btn'>
-                    <button className='join'>Get Started</button>
-                    <button className='signin'>Sign In</button>
+                    <Link to='/register'> <button className='join'>Get Started</button></Link>
+                    <Link to='/signin'> <button className='signin'>Sign In</button></Link>
                 </div>
             </div>
             <img src={FrontImage} alt='front'/>
