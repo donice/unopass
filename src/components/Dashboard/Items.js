@@ -2,7 +2,7 @@ import './Items.css'
 import React from 'react'
 
 export default function Items () {
-    const [userName, setUserName] = React.useState('Donice')
+    const [userName, setUserName] = React.useState('Mercy Nubi')
     const today = new Date().toLocaleDateString('en-uk', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
     const [data, setData] = React.useState({
         icon: '', //icon of the website
