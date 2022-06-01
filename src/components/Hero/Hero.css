@@ -80,7 +80,7 @@ body {
         flex-direction: column;
         align-items: center;
         margin-left: 0;
-        height: 100vh;
+        height: 80vh;
     }
 
     .Hero--info {
@@ -103,7 +103,7 @@ body {
 
     .Hero--section img {
         margin-top: 0px;
-        width: 380px;
+        width: 390px;
     }
 
     .Hero--btn {
