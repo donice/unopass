@@ -72,7 +72,8 @@ const SignIn = () => {
                                 id="fullName" 
                                 name="fullName" 
                                 onChange={handleChange}
-                                placeholder="Full Name" 
+                                placeholder="Full Name"
+                                value={formData.fullName} 
                             />
                             <br/>
                             <br />
@@ -83,6 +84,7 @@ const SignIn = () => {
                                 name="safeKey" 
                                 onChange={handleChange}
                                 placeholder="Safe Key" 
+                                value={formData.safeKey}
                             />
                             <br/>
                             <br/>
@@ -93,6 +95,7 @@ const SignIn = () => {
                                 name="password" 
                                 onChange={handleChange}
                                 placeholder="Password" 
+                                value={formData.password}
                             />
                             <br/>
                             <br/>

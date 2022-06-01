@@ -73,7 +73,8 @@ const Registration = () => {
                             id="firstName" 
                             name="firstName" 
                             onChange={handleChange}
-                            placeholder="First Name" 
+                            placeholder="First Name"
+                            value={formData.firstName} 
                         />
                         <br/>
                         <br />
@@ -86,6 +87,7 @@ const Registration = () => {
                             name="lastName" 
                             onChange={handleChange}
                             placeholder="Last Name" 
+                            value={formData.lastName}
                         />
                         <br/>
                         <br/>
@@ -98,7 +100,7 @@ const Registration = () => {
                             name="email" 
                             onChange={handleChange}
                             placeholder="Email" 
-                        />
+                            value={formData.email}/>
                         <br/>
                         <br/>
 
@@ -109,7 +111,7 @@ const Registration = () => {
                             id="password" 
                             name="password" 
                             placeholder="Password" 
-                        />
+                            value={formData.password}/>
                         <br/>
                         <br/>
                         <label for="passwor">Confirm Password</label>
@@ -119,7 +121,7 @@ const Registration = () => {
                             id="password" 
                             name="password" 
                             placeholder="Password" 
-                        />
+                            value={formData.password}/>
                         <br/>
                         <br/>
                         <Link to='/signin'>
