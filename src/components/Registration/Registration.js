@@ -2,6 +2,7 @@ import './Registration.css'
 import Logo from '../../static/images/unopass-blue-logo.png'
 import Favicon from '../../static/images/favicon.png'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Registration = () => {
     const [formData, setFormData] = useState({
@@ -51,10 +52,12 @@ const Registration = () => {
                         />
 
                         <div>
-                            <button 
-                                className='Registration--btn'
-                            >Sign in
-                            </button>
+                            <Link to='/signin'>
+                                <button 
+                                    className='Registration--btn'
+                                >Sign in
+                                </button>
+                            </Link>
                         </div>
                     </nav>
                     <form 
@@ -119,10 +122,13 @@ const Registration = () => {
                         />
                         <br/>
                         <br/>
-                        <input 
-                            type="submit" 
-                            value="Create Account" 
-                            className='submit' />
+                        <Link to='/signin'>
+                            <input 
+                                type="submit" 
+                                value="Create Account" 
+                                className='submit' 
+                        />
+                        </Link>
                         <p>
                             By proceeding, you agree to the 
                             <a href='#'>Terms of Services</a> and 

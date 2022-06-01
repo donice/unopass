@@ -16,11 +16,22 @@ const Body = () => {
                     easily with a single click 
                 </p>
                 <div className='Hero--btn'>
-                    <Link to='/register'> <button className='join'>Get Started</button></Link>
-                    <Link to='/signin'> <button className='signin'>Sign In</button></Link>
+                    <Link to='/register'>
+                        <button className='join'>
+                            Get Started
+                        </button>
+                    </Link>
+                    <Link to='/signin'> 
+                        <button className='signin'>
+                            Sign In
+                        </button>
+                    </Link>
                 </div>
             </div>
-            <img src={FrontImage} alt='front'/>
+            <img 
+                src={FrontImage} 
+                alt='front'
+            />
         </section>
     )
 }
