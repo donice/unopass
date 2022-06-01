@@ -7,7 +7,8 @@ const Registration = () => {
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
-        email: ""
+        email: "",
+        password: "",
     })
 
     console.log(formData)
@@ -62,7 +63,7 @@ const Registration = () => {
                         >
 
                         <h1>Create an account</h1>
-                        <label for="firstName">Name</label>
+                        <label for="firstName">First Name</label>
                         <br />
                         <input 
                             type="text" 
@@ -73,7 +74,8 @@ const Registration = () => {
                         />
                         <br/>
                         <br />
-                        <label for="lastName">Email Address</label>
+                        
+                        <label for="lastName">Last Name</label>
                         <br />
                         <input 
                             type="text" 
@@ -84,6 +86,19 @@ const Registration = () => {
                         />
                         <br/>
                         <br/>
+
+                        <label for="email">Email</label>
+                        <br />
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            onChange={handleChange}
+                            placeholder="Email" 
+                        />
+                        <br/>
+                        <br/>
+
                         <label for="password">Password</label>
                         <br />
                         <input 
