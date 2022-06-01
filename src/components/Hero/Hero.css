@@ -3,7 +3,7 @@ body {
 }
 
 .Hero {
-    height: 100vh;
+    height: auto;
     color: white;
 }
 
