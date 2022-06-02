@@ -155,6 +155,9 @@ body {
     }
     .Hero h1 {
         margin: 0;
+        font-size: 3rem;
+        line-height: 130%;
+        font-weight: 900;
     }
 
     .Hero--section img {
