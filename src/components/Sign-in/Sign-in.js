@@ -71,7 +71,7 @@ const SignIn = () => {
                         className='SignIn--form-area' 
                         >
                             <h1>Sign in</h1>
-                            <label for="fullName">Full Name</label><br />
+                            <label htmlFor="fullName">Full Name</label><br />
                             <input 
                                 type="text" 
                                 id="fullName" 

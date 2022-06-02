@@ -10,6 +10,7 @@ const Registration = () => {
         lastName: "",
         email: "",
         password: "",
+        passwordConfirm: ""
     })
 
     console.log(formData)
@@ -26,7 +27,7 @@ const Registration = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault() // This prevents the form from re-refreshing the form as it is supposed to, by default
-        console.log(formData)
+        console.log('Congratulations, You just Registratered')
     }
 
 
@@ -73,7 +74,7 @@ const Registration = () => {
                         >
 
                         <h1>Create an account</h1>
-                        <label for="firstName">First Name</label>
+                        <label htmlFor="firstName">First Name</label>
                         <br />
                         <input 
                             type="text" 
@@ -126,9 +127,9 @@ const Registration = () => {
                         <input 
                             type="password" 
                             id="password" 
-                            name="password" 
+                            name="passwordConfirm" 
                             placeholder="Password" 
-                            value={formData.password}/>
+                            value={formData.passwordConfirm}/>
                         <br/>
                         <br/>
                         <Link to='/signin'>
