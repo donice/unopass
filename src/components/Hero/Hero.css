@@ -21,7 +21,7 @@ body {
 }
 
 .Hero--info h1{
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 700;
     line-height: 65px;
     margin: 0;
@@ -29,9 +29,9 @@ body {
 }
 
 .Hero--info p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 30px;
-    margin: 0;
+    margin-top: 20px;
     text-align: left;
     color: #fff;
 
@@ -46,8 +46,8 @@ body {
 }
 
 .Hero--btn button {
-    width: 175px;
-    height: 45px;
+    width: 185px;
+    height: 50px;
     border: 1px solid transparent;
     border-radius: 5px;
     font-size: 16px;
@@ -137,3 +137,64 @@ body {
     
 
 }
+
+
+@media screen and (max-width: 600px) {
+    .Hero {
+        margin: 0;
+        /* border: 1px solid red; */
+    }
+    .Hero--section {
+        padding: 5px 0 ;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        /* height: 80vh; */
+    }
+    .Hero h1 {
+        margin: 0;
+    }
+
+    .Hero--section img {
+        margin: 0px;
+        width: 300px;
+    }
+
+    .Hero--btn button {
+        margin: 5px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .Hero {
+        flex-wrap: wrap;
+    }
+    .Hero h1 {
+        font-size: 2.8rem;
+        line-height: 130%;
+        margin: 0;
+    }
+
+    .Hero p {
+        font-size: 10px;
+        line-height: 190%;
+        margin: 0;
+    }
+
+
+    .Hero--section img {
+        margin: 0px;
+        width: 300px;
+    }
+
+    .Hero--btn button {
+        width: 150px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+}
+

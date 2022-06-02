@@ -50,7 +50,7 @@
 }
 
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
     .navbar img{
         width: 130px;
         cursor: pointer;
@@ -62,5 +62,25 @@
         border-radius: 5px;
         font-size: 14px;
         font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar img{
+        width: 95px;
+        cursor: pointer;
+    }
+
+    .navbar button {
+        width: 70px;
+        height: 27px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .navbar {
+        width: auto;
+        flex-wrap: wrap;
     }
 }

@@ -15,20 +15,27 @@ const Registration = () => {
     console.log(formData)
 
     const handleChange = (event) => {
+        const { name, value, type, checked } = event.target
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [name]: (type === 'checkbox')? checked: value
             }
         })
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault() // This prevents the form from re-refreshing the form as it is supposed to, by default
+        console.log(formData)
+    }
+
 
     return (
         <section>
             
             <div className='Registration'>
                 <div className='Registration-side-bar'>
-                    <img src={Favicon} />
+                    <img src={Favicon} alt='favicon' />
                     <h1>Safe. <br />
                         Secure. <br />
                         Swift. <br />
@@ -61,7 +68,7 @@ const Registration = () => {
                         </div>
                     </nav>
                     <form 
-                        action="#" 
+                        onSubmit={handleSubmit} 
                         className='Registration--form-area'
                         >
 
@@ -129,12 +136,17 @@ const Registration = () => {
                                 type="submit" 
                                 value="Create Account" 
                                 className='submit' 
-                        />
+                            />
                         </Link>
+                        <span>
+                            <a href='/' >
+                                Already have an account?
+                            </a>
+                        </span>
                         <p>
                             By proceeding, you agree to the 
-                            <a href='#'>Terms of Services</a> and 
-                            <a href='#'>Privacy Notice</a> 
+                            <a href='/'>Terms of Services</a> and 
+                            <a href='/'>Privacy Notice</a> 
                         </p>
                     </form> 
                 </div>

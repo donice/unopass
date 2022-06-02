@@ -13,16 +13,21 @@ const SignIn = () => {
         password: "",
     })
 
-    console.log(formData)
 
     const handleChange = (event) => {
+        const { name, value, type, checked } = event.target
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [name]: (type === 'checkbox')? checked: value
             }
         })
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault() // This prevents the form from re-refreshing the form as it is supposed to, by default
+        console.log(formData)
+      }
 
 
     return (
@@ -62,7 +67,7 @@ const SignIn = () => {
                         </div>
                     </nav>
                     <form 
-                        action="#" 
+                        onSubmit={handleSubmit}
                         className='SignIn--form-area' 
                         >
                             <h1>Sign in</h1>
@@ -107,13 +112,13 @@ const SignIn = () => {
                                 />
                             </Link>
                             <span>
-                                <a href='unopass.vercel.app' >
+                                <a href='/' >
                                     Cannot sign in?
                                 </a>
                             </span>
                             <p>By proceeding, you agree to the 
-                                <a href='unopass.ng'>Terms of Services
-                                </a> and <a href='unopass.ng'>Privacy Notice
+                                <a href='/'>Terms of Services
+                                </a> and <a href='/'>Privacy Notice
                                 </a>
                             </p>
                     </form> 
