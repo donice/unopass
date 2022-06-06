@@ -88,14 +88,14 @@
     }
     
     .Hero--info h1{
-        font-size: 45px;
+        font-size: 42px;
         font-weight: 900;
         line-height: 45px;
         margin-top: 20px;
     }
     
     .Hero--info p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 30px;
         margin-top: 20px;
         text-align:center;
