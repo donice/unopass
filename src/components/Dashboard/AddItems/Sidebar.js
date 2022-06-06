@@ -9,6 +9,7 @@ const Sidebar = (
 ) => {
     // This function sets the last edited || add item to the top
     const sortedItems = addItems.sort((a,b) => b.lastModified - a.lastModified);
+    console.log(sortedItems)
 
     return (
         <div className="AddItems-sidebar">
@@ -29,7 +30,7 @@ const Sidebar = (
                     >
                         <div className="sidebar-note-title">
                             <strong>{items.title} </strong>
-                            <button onClick={() => deleteItems(items.id)}>Delete</button>
+                            <button onClick={() => deleteItems(items.id)}>Remove</button>
                         </div>
 
                         <p>{items.body && items.body.substr(0, 100) + "..." } </p>

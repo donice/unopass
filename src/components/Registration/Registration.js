@@ -58,12 +58,12 @@ const Registration = () => {
                         />
 
                         <div>
-                            <Link to='/signin'>
+                            {/* <Link to='/signin'>
                                 <button 
                                     className='Registration--btn'
                                 >Sign in
                                 </button>
-                            </Link>
+                            </Link> */}
                         </div>
                     </nav>
                     <form 
@@ -139,7 +139,7 @@ const Registration = () => {
                                 value="Create Account" 
                                 className='submit' 
                             />
-                        </Link>
+                        </Link><br />
                         <span>
                             <a href='/' >
                                 Already have an account?

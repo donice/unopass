@@ -1,10 +1,8 @@
-body {
-    background-color: #0572EC;
-}
-
 .Hero {
     height: auto;
     color: white;
+    background-color: #0572EC;
+    height: 100vh;
 }
 
 .Hero--section {
@@ -18,14 +16,14 @@ body {
 .Hero--info {
     margin-top: 100px;
     margin-left: 0px;
+    width: 700px;
 }
 
 .Hero--info h1{
-    font-size: 70px;
+    font-size: 7rem;
     font-weight: 700;
-    line-height: 65px;
+    line-height: 75px;
     margin: 0;
-    /* border: 1px solid red; */
 }
 
 .Hero--info p {
@@ -34,19 +32,17 @@ body {
     margin-top: 20px;
     text-align: left;
     color: #fff;
-
-    /* border: 1px solid red; */
 }
 
 .Hero--btn {
     margin-top: 30px;
-    width: 380px;
+    width: 400px;
     display: flex;
     justify-content: space-between;
 }
 
 .Hero--btn button {
-    width: 185px;
+    width: 195px;
     height: 50px;
     border: 1px solid transparent;
     border-radius: 5px;
@@ -64,10 +60,9 @@ body {
 }
 
 .Hero--section img {
-    width: 550px;
+    width: 580px;
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
 
 
@@ -108,22 +103,10 @@ body {
 
     .Hero--btn {
         margin-top: 10px;
-        width: 400px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-
     }
     
     .Hero--btn button {
         width: 195px;
-        height: 40px;
-        border: 1px solid transparent;
-        border-radius: 5px;
-        font-size: 16px;
-        font-weight: 700;
-        margin: 10px;
     }
     
     .join {
@@ -138,40 +121,7 @@ body {
 
 }
 
-
-@media screen and (max-width: 600px) {
-    .Hero {
-        margin: 0;
-        /* border: 1px solid red; */
-    }
-    .Hero--section {
-        padding: 5px 0 ;
-        /* border: 1px solid red; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        /* height: 80vh; */
-    }
-    .Hero h1 {
-        margin: 0;
-        font-size: 40px;
-        line-height: 130%;
-        font-weight: 900;
-    }
-
-    .Hero--section img {
-        margin: 0px;
-        width: 330px;
-    }
-
-    .Hero--btn button {
-        margin: 5px;
-    }
-
-}
-
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 500px) {
     .Hero {
         flex-wrap: wrap;
     }
