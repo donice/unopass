@@ -23,11 +23,11 @@ const Sidebar = (
                 and add new items for everytime a new input is triggered */}
                 {addItems.map((items) => (
                     <div
-                        className={`AddItems-sidebar-note ${items.id === activeItem && "active"} `}
+                        className={`AddItems-sidebar-note ${items.id === activeItem && "active"}`}
                         onClick={() => setActiveItem(items.id)}
 
                     >
-                        <div className="AddItems-note-title">
+                        <div className="sidebar-note-title">
                             <strong>{items.title} </strong>
                             <button onClick={() => deleteItems(items.id)}>Delete</button>
                         </div>

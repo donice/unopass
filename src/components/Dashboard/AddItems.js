@@ -22,7 +22,7 @@ export default function AddItems () {
         const newItem = {
             id: uuid(),
             title: "New Item",
-            body: "",
+            body: "Add a new note",
             lastModified: Date.now()
         }
         // adds the item to the addItems array, 
@@ -64,7 +64,10 @@ export default function AddItems () {
                 activeItem={activeItem}
                 setActiveItems={setActiveItems}
             />
-            <Main /> 
+            <Main 
+                activeItem={getActiveItem()}
+                updateAddItems={updateAddItems}
+            /> 
         </section>
     )
 }
