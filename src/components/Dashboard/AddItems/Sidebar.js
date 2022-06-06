@@ -5,7 +5,7 @@ const Sidebar = (
         deleteItems,
         activeItem,
         setActiveItem,
-    }
+    } //destructured props for cleaner code
 ) => {
 
     
@@ -18,6 +18,9 @@ const Sidebar = (
             </div>
 
             <div className="AddItems-sidebar-notes">
+
+                {/* Maps through the addItems array, 
+                and add new items for everytime a new input is triggered */}
                 {addItems.map((items) => (
                     <div
                         className={`AddItems-sidebar-note ${items.id === activeItem && "active"} `}
@@ -25,13 +28,17 @@ const Sidebar = (
 
                     >
                         <div className="AddItems-note-title">
-                            <strong>Title</strong>
+                            <strong>{items.title} </strong>
                             <button onClick={() => deleteItems(items.id)}>Delete</button>
                         </div>
 
-                        <p>Body</p>
+                        <p>{items.body && items.body.substr(0, 100) + "..." } </p>
                         <small className="note-meta">
-                            last Modified: Today
+                            {/* This date setter tells us the specific moment */}
+                            last Modified: {new Date(items.lastModified).toLocaleDateString("en-UK", {
+                                hour: "2-digit",
+                                minute: "2-digit"
+                            })}
                         </small>
 
                     </div>
