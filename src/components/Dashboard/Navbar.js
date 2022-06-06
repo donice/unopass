@@ -1,5 +1,4 @@
 import './Dashboard.css'
-// import Logo from '../../static/images/favicon-white.png'
 import LogoText from '../../static/images/unopass-logo.png'
 import React, { useState } from 'react';
 import Popup from '../Popup/Popup';
@@ -78,8 +77,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
-
-
-
-{/* <i class="fas fa-plus" />add items */}

@@ -82,7 +82,7 @@ const SignIn = () => {
                             />
                             <br/>
                             <br />
-                            <label for="safeKey">Safe Key</label><br />
+                            <label htmlFor="safeKey">Safe Key</label><br />
                             <input 
                                 type="text" 
                                 id="safeKey" 
@@ -93,7 +93,7 @@ const SignIn = () => {
                             />
                             <br/>
                             <br/>
-                            <label for="password">Password</label><br />
+                            <label htmlFor="password">Password</label><br />
                             <input 
                                 type="password" 
                                 id="password" 

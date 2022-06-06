@@ -1,7 +1,7 @@
 import './Dashboard.css'
 import Navbar from './Navbar';
 import SideNav from './Side-nav';
-import Items from './Items';
+import AddItems from './AddItems';
 
 const Dashboard = () => {
     return (
@@ -9,8 +9,7 @@ const Dashboard = () => {
             <Navbar />
             <main>
                 <SideNav />
-                <Items />
-                
+                <AddItems />               
             </main>            
         </section>
     )

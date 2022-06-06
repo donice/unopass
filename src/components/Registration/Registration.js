@@ -13,8 +13,6 @@ const Registration = () => {
         passwordConfirm: ""
     })
 
-    console.log(formData)
-
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target
         setFormData(prevFormData => {
@@ -87,7 +85,7 @@ const Registration = () => {
                         <br/>
                         <br />
                         
-                        <label for="lastName">Last Name</label>
+                        <label htmlFor="lastName">Last Name</label>
                         <br />
                         <input 
                             type="text" 
@@ -100,7 +98,7 @@ const Registration = () => {
                         <br/>
                         <br/>
 
-                        <label for="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <br />
                         <input 
                             type="email" 
@@ -112,22 +110,25 @@ const Registration = () => {
                         <br/>
                         <br/>
 
-                        <label for="password">Password</label>
+                        <label htmlFor="password">Password</label>
                         <br />
                         <input 
                             type="password" 
                             id="password" 
                             name="password" 
+                            onChange={handleChange}
                             placeholder="Password" 
                             value={formData.password}/>
+
                         <br/>
                         <br/>
-                        <label for="passwor">Confirm Password</label>
+                        <label htmlFor="passwor">Confirm Password</label>
                         <br />
                         <input 
                             type="password" 
-                            id="password" 
+                            id="passwordConfirm" 
                             name="passwordConfirm" 
+                            onChange={handleChange}
                             placeholder="Password" 
                             value={formData.passwordConfirm}/>
                         <br/>
