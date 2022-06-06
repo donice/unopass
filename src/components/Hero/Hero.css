@@ -70,82 +70,55 @@
 
 
 @media screen and (max-width: 600px) {
-
+    .Hero {
+        height: auto;
+    }
+    
     .Hero--section {
-        padding: 10px 0 ;
-        /* border: 1px solid red; */
+        padding: 0 30px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        /* height: 80vh; */
     }
 
     .Hero--info {
-        margin-top: 30px;
-        /* border: 1px solid red; */
+        margin-top: 20px;
+        width: auto;
+        align-items: center;
+        text-align: center;
     }
     
     .Hero--info h1{
-        font-size: 3.5rem;
-        min-width: 200px;
+        font-size: 45px;
+        font-weight: 900;
         line-height: 45px;
-        text-align: center;
+        margin-top: 20px;
     }
-
+    
     .Hero--info p {
-        font-size: 13px;
-        line-height: 25px;
-        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 20px;
+        text-align:center;
+        color: #fff;
     }
-
-    .Hero--section img {
-        margin-top: 0px;
-        width: 390px;
-    }
-
+    
     .Hero--btn {
-        margin-top: 10px;
+        margin-top: 30px;
+        width: auto;
+        flex-direction: column;
     }
     
     .Hero--btn button {
         width: 195px;
+        height: 50px;
+        margin-bottom: 10px;
+        font-size: 16px;
     }
     
-    .join {
-        background-color: #16436c;
-        color: white;
-    }
-    
-    .signin {
-        color: #16436c;
-    }
-    
-
-}
-
-@media screen and (max-width: 500px) {
-    .Hero {
-        flex-wrap: wrap;
-    }
-    .Hero h1 {
-        font-size: 2.8rem;
-        line-height: 130%;
-        margin: 0;
-    }
-
-    .Hero p {
-        font-size: 10px;
-        line-height: 190%;
-        margin: 0;
-    }
-
-
     .Hero--section img {
-        margin: 0px;
-        width: 300px;
+        width: auto;
+        align-items: center;
     }
-
 }
 
 @media screen and (min-width: 1600px) {
