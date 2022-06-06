@@ -84,3 +84,17 @@
         flex-wrap: wrap;
     }
 }
+
+@media screen and (min-width: 1600px) {
+    
+    .navbar img{
+        width: 190px;
+        cursor: pointer;
+    }
+    
+    .navbar button {
+        width: 200px;
+        height: 55px;
+        font-size: 20px;
+    }
+}
