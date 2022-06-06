@@ -21,7 +21,7 @@ export default function AddItems () {
     const onAddItem = () => {
         const newItem = {
             id: uuid(),
-            title: "New Item",
+            title: "Untitled Item",
             body: "Add a new note",
             lastModified: Date.now()
         }

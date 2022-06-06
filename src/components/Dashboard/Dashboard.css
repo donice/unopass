@@ -1,5 +1,7 @@
 .Dashboard main{
     display: flex;
+    height: 90vh;
+    /* border: 10px solid red; */
 }
 /* horizontal nav  */
 .Dashboard--navbar {
@@ -62,7 +64,6 @@
     color: white;
     border: 1px solid transparent;
     width: 250px;
-    height: 100vh;
     box-shadow: 1px 1px 10px 1px rgb(120, 117, 117);
 }
 

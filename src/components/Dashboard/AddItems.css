@@ -1,6 +1,6 @@
 .AddItems {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     font-size: 16px;
     display: flex;
@@ -69,6 +69,10 @@
 .AddItems-sidebar-note.active small {
   background: #08c;
   color: white;
+}
+
+.note-meta {
+  font-size: 12px;
 }
 
 /* NOTE EDITOR/PREVIEW (MAIN) STYLES */
