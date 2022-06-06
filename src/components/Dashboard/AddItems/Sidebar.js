@@ -7,8 +7,8 @@ const Sidebar = (
         setActiveItem,
     } //destructured props for cleaner code
 ) => {
-
-    
+    // This function sets the last edited || add item to the top
+    const sortedItems = addItems.sort((a,b) => b.lastModified - a.lastModified);
 
     return (
         <div className="AddItems-sidebar">
