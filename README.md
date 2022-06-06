@@ -9,5 +9,5 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://unopass.vercel.com](http://unopass.vercel.com) to view it in your browser.
+Open [http://unopass.vercel.app](http://unopass.vercel.app) to view it in your browser.
 
