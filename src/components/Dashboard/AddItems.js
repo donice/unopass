@@ -9,7 +9,7 @@ function AddItems () {
     const [addItems, setAddItems] = useState(
         localStorage.addItems ? JSON.parse(localStorage.addItems) : []
     );
-    const [activeItem, setActiveItems] = useState(false)
+    const [activeItem, setActiveItem] = useState(false)
 
 
     // This effect retains information on the 
@@ -24,14 +24,14 @@ function AddItems () {
         const newItem = {
             id: uuid(),
             title: "Untitled Item",
-            body: "Add a new note",
+            body: "",
             lastModified: Date.now()
         }
         // adds the item to the addItems array, 
         // including the previous items already in the array
         setAddItems([newItem, ...addItems]);
-        setActiveItems(newItem.id)
-    }
+        setActiveItem(newItem.id)
+ }
 
     // Function to update the add items
     const updateAddItems = (updateAddItems) => {
@@ -65,7 +65,7 @@ function AddItems () {
                 onAddItem={onAddItem}
                 deleteItems={deleteItems}
                 activeItem={activeItem}
-                setActiveItems={setActiveItems}
+                setActiveItem={setActiveItem}
             />
             <Main 
                 activeItem={getActiveItem()}
