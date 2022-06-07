@@ -134,3 +134,20 @@ textarea {
   font-size: 1rem;
   line-height: 2rem;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track { /* Track */
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb { /* Handle */
+  background: rgb(234, 234, 234);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover { /* Hover */
+  background: rgb(202, 202, 202);
+}

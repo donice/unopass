@@ -29,7 +29,8 @@ function AddItems () {
         }
         // adds the item to the addItems array, 
         // including the previous items already in the array
-        setAddItems([newItem, ...addItems])
+        setAddItems([newItem, ...addItems]);
+        setActiveItems(newItem.id)
     }
 
     // Function to update the add items

@@ -1,7 +1,7 @@
 .Dashboard main{
     display: flex;
     height: 90vh;
-    /* border: 10px solid red; */
+    width: auto;
 }
 /* horizontal nav  */
 .Dashboard--navbar {
@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
     position: sticky;
     box-shadow: 1px 1px 6px 1px #012241;
 }
@@ -60,6 +60,7 @@
 
 .Dashboard--nav {
     background-color: #16436c;
+    height: 91vh;
     margin: 0;
     color: white;
     border: 1px solid transparent;
@@ -73,9 +74,8 @@
 
 .Dashboard--nav--info p {
     font-size: 10px;
-    font-weight: 900;
+    font-weight: 700;
     padding: 0 30px;
-    width: 84%;
     letter-spacing: 3px;
     color: #ffaa05;
 
@@ -83,7 +83,7 @@
 }
 
 .Dashboard--nav--info .fas {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 100;
     padding: 15px 30px;
     width: 75%;
@@ -106,7 +106,7 @@
 .Dashboard--nav--info hr {
     font-weight: 100;
     border: 0.1px solid rgb(147, 147, 149);
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 /* Side Nav  */
