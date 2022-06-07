@@ -65,25 +65,6 @@
     }
 }
 
-@media screen and (max-width: 500px) {
-    .navbar img{
-        width: 95px;
-        cursor: pointer;
-    }
-
-    .navbar button {
-        width: 70px;
-        height: 27px;
-        border-radius: 5px;
-        font-size: 12px;
-        font-weight: 700;
-    }
-
-    .navbar {
-        width: auto;
-        flex-wrap: wrap;
-    }
-}
 
 @media screen and (min-width: 1600px) {
     
