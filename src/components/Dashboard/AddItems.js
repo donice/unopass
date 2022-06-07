@@ -5,8 +5,10 @@ import Sidebar from './AddItems/Sidebar'
 import { useEffect, useState } from 'react'
 import uuid from 'react-uuid'
 
-export default function AddItems () {
-    const [addItems, setAddItems] = useState(JSON.parse(localStorage.addItems) || [])
+function AddItems () {
+    const [addItems, setAddItems] = useState(
+        localStorage.addItems ? JSON.parse(localStorage.addItems) : []
+    );
     const [activeItem, setActiveItems] = useState(false)
 
 
@@ -72,3 +74,4 @@ export default function AddItems () {
     )
 }
 
+export default AddItems;
