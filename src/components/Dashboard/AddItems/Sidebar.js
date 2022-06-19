@@ -30,7 +30,7 @@ const Sidebar = (
                     >
                         <div className="sidebar-note-title">
                             <strong>{items.title} </strong>
-                            <button onClick={() => deleteItems(items.id)}>Remove</button>
+                            <button onClick={() => deleteItems(items.id)}><i  class="fas fa-file-minus"></i></button>
                         </div>
 
                         <p>{items.body && items.body.substr(0, 100) + "..." } </p>

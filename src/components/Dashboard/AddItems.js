@@ -7,13 +7,14 @@ import uuid from 'react-uuid'
 
 function AddItems () {
     const [addItems, setAddItems] = useState(
+        // if add items cannot return access local Storage, It returns undefimed and uses an empty array 
         localStorage.addItems ? JSON.parse(localStorage.addItems) : []
     );
     const [activeItem, setActiveItem] = useState(false)
 
 
-    // This effect retains information on the 
-    // local storage 
+    // This effect retains information on the local storage 
+    // ONly strings can save in local storage, hence - JSON.stringify
     useEffect(() => {
         localStorage.setItem("addItems", JSON.stringify(addItems))
     }, [addItems]) //this useEffect is triggered by every typed word in the addItems
