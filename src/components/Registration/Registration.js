@@ -117,154 +117,168 @@ const Registration = () => {
 
 
    return (
-      <section>      
-         <div className='Registration'>
-            <div className='Registration-side-bar'>
-               <img src={Favicon} alt='favicon' />
-               <h1>Safe. <br />
-                	Secure. <br />
-                	Swift. <br />
-               </h1>
-               <p>You'd never have to worry about the security <br />
-                	of your accounts, ever again. <br />
-                	Start today, with a click
-               </p>
-            </div>
-            <div className='Registration--form'>
-               <nav className='Registration--navbar' >
-                	<img 
-                	   src={Favicon} 
-                	   alt='favicon' 
-                	   className='Registration-navbar--favicon'
-                	/>
-                	<img 
-                	   src={Logo} 
-                	   alt='logo' 
-                	   className='Registration--navbar--logo'
-                	/>
-               </nav>
+		<>
+		{ success ?
+			( 
+				<section>
+					<h1>Success Registration</h1>
+					<p>
+						<a href='#'>Sign</a>
+					</p>
+				</section>
+			)
+			:
+   	   	(<section>
+   	   	   <div className='Registration'>
+   	   	   	<div className='Registration-side-bar'>
+   	   	   	   <img src={Favicon} alt='favicon' />
+   	   	   	   <h1>Safe. <br />
+   	   	   	    	Secure. <br />
+   	   	   	    	Swift. <br />
+   	   	   	   </h1>
+   	   	   	   <p>You'd never have to worry about the security <br />
+   	   	   	    	of your accounts, ever again. <br />
+   	   	   	    	Start today, with a click
+   	   	   	   </p>
+   	   	   	</div>
 
-               <form 
-                	onSubmit={handleSubmit} 
-                	className='Registration--form-area'
-                	>
+   	   	   <div className='Registration--form'>
+						<nav className='Registration--navbar' >
+						 	<img 
+						 	   src={Favicon} 
+						 	   alt='favicon' 
+						 	   className='Registration-navbar--favicon'
+						 	/>
+						 	<img 
+						 	   src={Logo} 
+						 	   alt='logo' 
+						 	   className='Registration--navbar--logo'
+						 	/>
+						</nav>
+						<form 
+   	   	   	   onSubmit={handleSubmit} 
+   	   	   	   className='Registration--form-area'
+   	   	   	>
 
-                	<h1>Create an account</h1>
+   	   	   	   <h1>Create an account</h1>
 
-						<label htmlFor="username">
-                     Username:
-                     <span className={validUser ? 'valid' : 'hide'} >
-                           <FontAwesomeIcon icon={faCheck} />
-                     </span>
-                     <span className={validUser || !user ? 'hide' : 'invalid'} >
-                           <FontAwesomeIcon icon={faTimes} />
-                     </span>
-                  </label>
-						<br />
-                  <input 
-                     type = 'text'
-                     id = "username" //matches the label's htmlFor
-                     ref = {userRef}
-                     autoComplete = 'off'
-                     onChange = {(e)  => setUser(e.target.value)}
-                     required
-                     aria-invalid = {validUser ? 'false' : 'true'}
-                     aria-describedby = 'uidnote' // matches the error paragraph id
-                     onFocus = {() => setUserFocus(true)}
-                     onBlur = {() => setUserFocus(false)}
-                  />
-                  <p id="uidnote" className={userFocus && user && !validUser 
-                  ? "instructions" : "offscreen" } >
-                     <FontAwesomeIcon icon={faInfoCircle} />
-                     4 to 24 characters. <br />
-                     Must begin with a letter. <br />
-                     Letters, numbers, underscores hyphens allowed.
-                  </p>
-                	<br/>
-                	<br />
+								<label htmlFor="username">
+   	   	   	   	Username:
+   	   	   	   	<span className={validUser ? 'valid' : 'hide'} >
+   	   	   	   	      <FontAwesomeIcon icon={faCheck} />
+   	   	   	   	   </span>
+   	   	   	   		<span className={validUser || !user ? 'hide' : 'invalid'} >
+   	   	   	   	      <FontAwesomeIcon icon={faTimes} />
+   	   	   	   	   </span>
+   	   	   	   	</label>
+								<br />
+   	   	   	   	<input 
+   	   	   	   	   type = 'text'
+   	   	   	   	   id = "username" //matches the label's htmlFor
+   	   	   	   	   ref = {userRef}
+   	   	   	   	   autoComplete = 'off'
+   	   	   	   	   onChange = {(e)  => setUser(e.target.value)}
+   	   	   	   	   required
+   	   	   	   	   aria-invalid = {validUser ? 'false' : 'true'}
+   	   	   	   	   aria-describedby = 'uidnote' // matches the error paragraph id
+   	   	   	   	   onFocus = {() => setUserFocus(true)}
+   	   	   	   	   onBlur = {() => setUserFocus(false)}
+   	   	   	   	/>
+   	   	   	   	<p id="uidnote" className={userFocus && user && !validUser 
+   	   	   	   	? "instructions" : "offscreen" } >
+   	   	   	   	   <FontAwesomeIcon icon={faInfoCircle} />
+   	   	   	   	   4 to 24 characters. <br />
+   	   	   	   	   Must begin with a letter. <br />
+   	   	   	   	   Letters, numbers, underscores hyphens allowed.
+   	   	   	   	</p>
+   	   	   	   	<br/>
+   	   	   	   	<br />
 		
-                  <label htmlFor="email">
-                     Email:
-                     <span className={validEmail ? 'valid' : 'hide'} >
-                           <FontAwesomeIcon icon={faCheck} />
-                     </span>
-                     <span className={validEmail || !email ? 'hide' : 'invalid'} >
-                           <FontAwesomeIcon icon={faTimes} />
-                     </span>
-                  </label><br />
-                  <input 
-                     type = 'text'
-                     id = "email"  // matches the label's htmlFor
-                     onChange = {(e)  => setEmail(e.target.value)}
-                     required
-                     aria-invalid = {validEmail ? 'false' : 'true'}
-                     aria-describedby = 'emailconfirm' // matches the error paragraph id
-                     onFocus = {() => setEmailFocus(true)}
-                     onBlur = {() => setEmailFocus(false)}
-                  />
-                  <p id="emailconfirm" className={emailFocus && !validEmail ? "instructions" : "offscreen" } >
-                     <FontAwesomeIcon icon={faInfoCircle} />
-                     Enter a valid email address
-                  </p>
+   	   	   	   	<label htmlFor="email">
+   	   	   	   	   Email:
+   	   	   	   	   <span className={validEmail ? 'valid' : 'hide'} >
+   	   	   	   	      <FontAwesomeIcon icon={faCheck} />
+   	   	   	   	   </span>
+   	   	   	   	   <span className={validEmail || !email ? 'hide' : 'invalid'} >
+   	   	   	   	      <FontAwesomeIcon icon={faTimes} />
+   	   	   	   	   </span>
+   	   	   	   	</label><br />
+   	   	   	   	<input 
+   	   	   	   	   type = 'text'
+   	   	   	   	   id = "email"  // matches the label's htmlFor
+   	   	   	   	   onChange = {(e)  => setEmail(e.target.value)}
+   	   	   	   	   required
+   	   	   	   	   aria-invalid = {validEmail ? 'false' : 'true'}
+   	   	   	   	   aria-describedby = 'emailconfirm' // matches the error paragraph id
+   	   	   	   	   onFocus = {() => setEmailFocus(true)}
+   	   	   	   	   onBlur = {() => setEmailFocus(false)}
+   	   	   	   	/>
+   	   	   	   	<p id="emailconfirm" className={emailFocus && !validEmail ? "instructions" : "offscreen" } >
+   	   	   	   	   <FontAwesomeIcon icon={faInfoCircle} />
+   	   	   	   	   Enter a valid email address
+   	   	   	   	</p>
+								<br/>
+								<br/>
 
-                	<br/>
-                	<br/>
+								<label htmlFor="password">
+   	   	   	   	   Password:
+   	   	   	   	   <span className={validPassword ? 'valid' : 'hide'} >
+   	   	   	   	      	   <FontAwesomeIcon icon={faCheck} />
+   	   	   	   	   </span>
+   	   	   	   	   <span className={validPassword || !password ? 'hide' : 'invalid'} >
+   	   	   	   	      	   <FontAwesomeIcon icon={faTimes} />
+   	   	   	   	   </span>
+   	   	   	   	</label><br />
+   	   	   	   	<input 
+   	   	   	   	   type = 'password'
+   	   	   	   	   id = "password"  // matches the label's htmlFor
+   	   	   	   	   onChange = {(e)  => setPassword(e.target.value)}
+   	   	   	   	   autoComplete= 'false'
+   	   	   	   	   required
+   	   	   	   	   aria-invalid = {validPassword ? 'false' : 'true'}
+   	   	   	   	   aria-describedby = 'pwdnote' // matches the error paragraph id
+   	   	   	   	   onFocus = {() => setPasswordFocus(true)}
+   	   	   	   	   onBlur = {() => setPasswordFocus(false)}
+   	   	   	   	/>
+   	   	   	   	<p id="pwdnote" className={passwordFocus && !validPassword ? "instructions" : "offscreen" } >
+   	   	   	   	   <FontAwesomeIcon icon={faInfoCircle} />
+   	   	   	   	   4 to 24 characters. <br />
+   	   	   	   	   Must include uppercase and lowercase letters, a number and a special character <br />
+   	   	   	   	   Allowed special characters: 
+   	   	   	   	   <span aria-label="exclamation mark">!</span>
+   	   	   	   	   <span aria-label="at symbol">@</span>
+   	   	   	   	   <span aria-label="hashtag">#</span>
+   	   	   	   	   <span aria-label="dollar sign">$</span>
+   	   	   	   	   <span aria-label="percent">%</span>
+   	   	   	   	</p>
+   	   	   	   	<br/>
+   	   	   	   	<br/>
 
-						<label htmlFor="password">
-                     Password:
-                     <span className={validPassword ? 'valid' : 'hide'} >
-                           <FontAwesomeIcon icon={faCheck} />
-                     </span>
-                     <span className={validPassword || !password ? 'hide' : 'invalid'} >
-                           <FontAwesomeIcon icon={faTimes} />
-                     </span>
-                  </label><br />
-                  <input 
-                     type = 'password'
-                     id = "password"  // matches the label's htmlFor
-                     onChange = {(e)  => setPassword(e.target.value)}
-                     autoComplete= 'false'
-                     required
-                     aria-invalid = {validPassword ? 'false' : 'true'}
-                     aria-describedby = 'pwdnote' // matches the error paragraph id
-                     onFocus = {() => setPasswordFocus(true)}
-                     onBlur = {() => setPasswordFocus(false)}
-                  />
-                  <p id="pwdnote" className={passwordFocus && !validPassword ? "instructions" : "offscreen" } >
-                     <FontAwesomeIcon icon={faInfoCircle} />
-                     4 to 24 characters. <br />
-                     Must include uppercase and lowercase letters, a number and a special character <br />
-                     Allowed special characters: 
-                     <span aria-label="exclamation mark">!</span>
-                     <span aria-label="at symbol">@</span>
-                     <span aria-label="hashtag">#</span>
-                     <span aria-label="dollar sign">$</span>
-                     <span aria-label="percent">%</span>
-                  </p>
-                	<br/>
-                	<br/>
+   	   	   	   	{/* <Link to='/'> */}
+   	   	   	   	 	<input 
+   	   	   	   	 	  type="submit" 
+   	   	   	   	 	  value="Create Account" 
+   	   	   	   	 	  className='submit' 
+   	   	   	   	 	/>
+   	   	   	   	{/* </Link> */}
+								<br />
+   	   	   	   	<span>
+   	   	   	   	 	<a href='/' >
+   	   	   	   	 	   Already have an account?
+   	   	   	   	 	</a>
+   	   	   	   	</span>
+   	   	   	   	<p>
+   	   	   	   	 	By proceeding, you agree to the 
+   	   	   	   	 	<a href='/'>Terms of Services</a> and 
+   	   	   	   	 	<a href='/'>Privacy Notice</a> 
+   	   	   	   	</p>
+   	   	   	</form> 
+   	   	   </div>
 
-                	<Link to='/signin'>
-                	   <input 
-                	     type="submit" 
-                	     value="Create Account" 
-                	     className='submit' 
-                	   />
-                	</Link><br />
-                	<span>
-                	   <a href='/' >
-                	     Already have an account?
-                	   </a>
-                	</span>
-                	<p>
-                	   By proceeding, you agree to the 
-                	   <a href='/'>Terms of Services</a> and 
-                	   <a href='/'>Privacy Notice</a> 
-                	</p>
-                	  </form> 
-               </div>
-            </div>
-      </section>
+   	   	</div>
+      	</section>)
+		}
+		</>
    )
 }
 
