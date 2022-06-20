@@ -8,15 +8,12 @@
 }
 
 .Registration--navbar {
-    /* background-color: #0572ec; */
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     position: sticky;
     flex-direction: row;
-    /* border: 1px solid red; */
 }
 
 .Registration--navbar img{
@@ -47,7 +44,6 @@
 }
 
 .Registration {
-    /* border: 1px solid red; */
     display: flex;
     background-color: #f7f7f7;
     color: #000;
@@ -66,7 +62,6 @@
 }
 
 .Registration-side-bar h1 {
-    /* border: 1px solid red ; */
     padding: 0px 50px;
     font-size: 70px;
     font-weight: 900;
@@ -77,7 +72,6 @@
 }
 
 .Registration-side-bar p {
-    /* border: 1px solid red ; */
     padding: 0px 50px;
     font-size: 10px;
     font-weight: 500;
@@ -85,11 +79,20 @@
     line-height: 15px;
 }
 
-.Registration--form {
+.Registration--success {
     margin: auto;
-    /* border: 1px solid red; */
     padding: 20px;
 }
+
+.Registration--success h1 {
+    font-size: 30px;
+}
+
+.Registration--form {
+    margin: auto;
+    padding: 20px;
+}
+
 
 .Registration--form h1 {
     font-size: 30px;
@@ -215,7 +218,6 @@
     }
     
     .Registration {
-        /* border: 1px solid red; */
         display: flex;
         background-color: #f7f7f7;
         color: #000;
@@ -227,7 +229,6 @@
     
     .Registration--form {
         margin: auto;
-        /* border: 1px solid red; */
         padding: 20px;
     }
     
@@ -235,7 +236,6 @@
         font-size: 30px;
         text-align: center;
         width: 310px;
-        /* border: 1px solid red; */
     }
     
     .Registration--form-area {
@@ -243,7 +243,6 @@
         padding: 10px 30px 30px 30px; 
         border-radius: 10px;
         box-shadow: 1px 10px 10px 1px rgb(224, 223, 223);
-        /* border: 1px solid red; */
         width: 250;
         margin: auto 0;
     }
@@ -281,8 +280,6 @@
         font-weight: 700;
         text-decoration: none;
         width: 200px;
-        /* border: 1px solid red; */
-
     }
     
     .Registration--form-area p {

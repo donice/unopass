@@ -10,7 +10,7 @@ import axios from '../../api/axios'
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_.]{3,23}$/;
 const EMAIL_REGEX = /^[a-zA-Z][a-zA-Z0-9-_](?=.*[.]).{3,23}$/;
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-
+ 
 const REGISTER_URL = './create'; // the route on the backend url
 
 const Registration = () => {
@@ -83,36 +83,27 @@ const Registration = () => {
       }
       // .......................................
 
-      try{
-         fetch(` axios ${REGISTER_URL} `, {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: user,           
-              email,
-              password,
-            })
-         }).then(function(response) {
-            return response.json();
-         }).then(setErrMsg('No server Response'))
-      }
+      fetch('https://unopass-api.herokuapp.com/user/create', {
+         method: 'POST',
+         headers: {
+           'Accept': 'application/json',
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           email,
+           password,
+           name: user,
+         })
+      }).then(function(response) {
+         return response.json();
+      }).then(function(data) {
+         console.log(data)
+      })
 
-      catch(err) {
-         if(err) {
-            console.log(err)
-         }
-         if (!err?.response) {
-            setErrMsg('No server Response')
-         } else if (err.response?.status === 402) {
-            setErrMsg('Username Taken')
-         } else {
-            setErrMsg('Registration Failed')
-         }
-         errRef.current.focus()
-      }
+		setUser('');
+		setPassword('');
+		setEmail('');
+ 
    }
 
 
@@ -120,10 +111,10 @@ const Registration = () => {
 		<>
 		{ success ?
 			( 
-				<section>
+				<section className='Registration--success'>
 					<h1>Success Registration</h1>
 					<p>
-						<a href='#'>Sign</a>
+						<a href='#'>Sign In</a>
 					</p>
 				</section>
 			)
@@ -159,6 +150,9 @@ const Registration = () => {
    	   	   	   onSubmit={handleSubmit} 
    	   	   	   className='Registration--form-area'
    	   	   	>
+							{/* errr message  */}
+							<p ref={errRef} className={errMssg ? 'errmsg' : 'offscreen'} 
+               		aria-live = 'assertive'> {errMssg} </p>
 
    	   	   	   <h1>Create an account</h1>
 
