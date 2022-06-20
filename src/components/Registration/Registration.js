@@ -5,13 +5,12 @@ import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import axios from '../../api/axios'
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_.]{3,23}$/;
 const EMAIL_REGEX = /^[a-zA-Z][a-zA-Z0-9-_](?=.*[.]).{3,23}$/;
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
  
-const REGISTER_URL = './create'; // the route on the backend url
+// const REGISTER_URL = './create'; // the route on the backend url
 
 const Registration = () => {
 
@@ -78,7 +77,7 @@ const Registration = () => {
       const v2 = EMAIL_REGEX.test(email)
       const v3 = PASSWORD_REGEX.test(password)
       if (!v1 || !v2 || !v3) {
-         setErrMsg('inavlid Entry');
+         setErrMsg('User already exists');
          return;
       }
       // .......................................
