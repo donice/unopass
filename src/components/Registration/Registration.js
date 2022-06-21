@@ -3,7 +3,7 @@ import Logo from '../../static/images/unopass-blue-logo.png'
 import Favicon from '../../static/images/favicon.png'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { faCheck, faTimes, faInfoCircle, faEye, faEyeSlash, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faTimes, faInfoCircle, faEye, faEyeSlash, faCheckCircle, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_.]{3,23}$/;
@@ -137,8 +137,20 @@ const Registration = () => {
 						/>
    	   	   </span>
 					<h1>Your Registration is Successful</h1>
-					<h3>Proceed to the Sign in Page</h3>
-					<button><a href='/signin'>Sign in</a></button>
+					<p>Proceed to the Sign in Page</p>
+					<button>
+						<a href='/signin'>
+							Sign in
+							<span>
+   	   	   			<FontAwesomeIcon 
+									icon={faArrowRightToBracket} 
+									style={{
+										color: "white",
+									}}
+								/>
+   	   	   		</span>
+						</a>
+					</button>
 				</section>
 			)
 			:
