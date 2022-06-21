@@ -99,17 +99,21 @@
 
 .Registration--success h3 {
     font-size: 20px;
-    margin-bottom: 40px; 
 }
 
-.Registration--success a {
+.Registration--success button {
     background-color: #0572ec;
+    box-shadow: 1px 10px 10px rgb(224, 223, 223);
     padding: 10px 30px;
-    color: white;
+    border: transparent;
     border-radius: 10px;
     font-size: 20px;
-    text-decoration: 0;
-    margin-top: 30px;
+    text-decoration: none;
+}
+
+.Registration--success button a {
+    text-decoration: none;
+    color: white;
 }
 
 /* ............................... */

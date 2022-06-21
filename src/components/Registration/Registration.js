@@ -138,7 +138,7 @@ const Registration = () => {
    	   	   </span>
 					<h1>Your Registration is Successful</h1>
 					<h3>Proceed to the Sign in Page</h3>
-					<a href='/signin'>Sign in</a>
+					<button><a href='/signin'>Sign in</a></button>
 				</section>
 			)
 			:
