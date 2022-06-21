@@ -1,13 +1,10 @@
 .SignIn--navbar {
-    /* background-color: #0572ec; */
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     position: sticky;
     flex-direction: row;
-    /* border: 1px solid red; */
 }
 .SignIn-navbar--favicon {
     display: none;
@@ -59,7 +56,6 @@
 }
 
 .SignIn-side-bar h1 {
-    /* border: 1px solid red ; */
     padding: 0px 50px;
     font-size: 70px;
     font-weight: 900;
@@ -70,7 +66,6 @@
 }
 
 .SignIn-side-bar p {
-    /* border: 1px solid red ; */
     padding: 0px 50px;
     font-size: 10px;
     font-weight: 500;
@@ -80,7 +75,6 @@
 
 .SignIn--form {
     margin: auto;
-    /* border: 1px solid red; */
     padding: 20px;
 }
 

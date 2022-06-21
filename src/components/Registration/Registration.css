@@ -79,20 +79,44 @@
     line-height: 15px;
 }
 
+/* Successful Registration Page */
+
 .Registration--success {
+    width: 400px;
+    background-color: white;
+    padding: 10px 30px 30px 30px; 
+    border-radius: 10px;
+    box-shadow: 1px 10px 10px 1px rgb(224, 223, 223);
     margin: auto;
+    margin-top: 200px;
     padding: 20px;
+    text-align: center;
 }
 
 .Registration--success h1 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
+.Registration--success h3 {
+    font-size: 20px;
+    margin-bottom: 40px; 
+}
+
+.Registration--success a {
+    background-color: #0572ec;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    text-decoration: 0;
+    margin-top: 30px;
+}
+
+/* ............................... */
 .Registration--form {
     margin: auto;
     padding: 20px;
 }
-
 
 .Registration--form h1 {
     font-size: 30px;

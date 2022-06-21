@@ -3,7 +3,7 @@ import Logo from '../../static/images/unopass-blue-logo.png'
 import Favicon from '../../static/images/favicon.png'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faTimes, faInfoCircle, faEye, faEyeSlash, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_.]{3,23}$/;
@@ -28,6 +28,9 @@ const Registration = () => {
    const [password, setPassword] = useState('');
    const [validPassword, setValidPassword] = useState(false);
    const [passwordFocus, setPasswordFocus] = useState(false);
+	
+	const [passwordType, setPasswordType] = useState("password");
+	const [passwordInput, setPasswordInput] = useState("");
 
    const [errMssg, setErrMsg] = useState('');
    const [success, setSucess] = useState(false);
@@ -66,7 +69,6 @@ const Registration = () => {
    }, [user, email, password])
 
 
-
 	//.............................
 
 	// handleSubmit function
@@ -102,19 +104,41 @@ const Registration = () => {
 		setUser('');
 		setPassword('');
 		setEmail('');
+		setSucess(true)
  
    }
 
+	//handlePasswordToggle function 
+
+	const passwordToggle = () => {
+		if(passwordType === 'password') {
+			setPasswordType("text")
+			return;
+		}
+		setPasswordType("password")
+	}
+
+	const handlePasswordToggle = () => {
+		passwordToggle()
+	}
 
    return (
 		<>
 		{ success ?
 			( 
 				<section className='Registration--success'>
-					<h1>Success Registration</h1>
-					<p>
-						<a href='#'>Sign In</a>
-					</p>
+					<span>
+   	   	   	<FontAwesomeIcon 
+							icon={faCheckCircle} 
+							style={{
+								color: "green",
+								fontSize: "50px"
+							}}
+						/>
+   	   	   </span>
+					<h1>Your Registration is Successful</h1>
+					<h3>Proceed to the Sign in Page</h3>
+					<a href='/signin'>Sign in</a>
 				</section>
 			)
 			:
@@ -157,7 +181,7 @@ const Registration = () => {
 
 								<label htmlFor="username">
    	   	   	   	Username:
-   	   	   	   	<span className={validUser ? 'valid' : 'hide'} >
+   	   	   	   		<span className={validUser ? 'valid' : 'hide'} >
    	   	   	   	      <FontAwesomeIcon icon={faCheck} />
    	   	   	   	   </span>
    	   	   	   		<span className={validUser || !user ? 'hide' : 'invalid'} >
@@ -223,7 +247,7 @@ const Registration = () => {
    	   	   	   	   </span>
    	   	   	   	</label><br />
    	   	   	   	<input 
-   	   	   	   	   type = 'password'
+   	   	   	   	   type = 'text'
    	   	   	   	   id = "password"  // matches the label's htmlFor
    	   	   	   	   onChange = {(e)  => setPassword(e.target.value)}
    	   	   	   	   autoComplete= 'false'
@@ -233,6 +257,21 @@ const Registration = () => {
    	   	   	   	   onFocus = {() => setPasswordFocus(true)}
    	   	   	   	   onBlur = {() => setPasswordFocus(false)}
    	   	   	   	/>
+
+
+								{/* hide/show password toggle  */}
+								<span onClick={handlePasswordToggle} style={{color:'red', cursor:"pointer"}} >
+									<span style={{fontSize: '13px'}} >
+										<FontAwesomeIcon icon={faEye}/>
+									</span>
+
+									<span style={{fontSize: '13px'}} >
+										<FontAwesomeIcon icon={faEyeSlash}/>
+									</span>
+								</span>
+								{/* ----------------------------- */}
+
+
    	   	   	   	<p id="pwdnote" className={passwordFocus && !validPassword ? "instructions" : "offscreen" } >
    	   	   	   	   <FontAwesomeIcon icon={faInfoCircle} />
    	   	   	   	   4 to 24 characters. <br />
