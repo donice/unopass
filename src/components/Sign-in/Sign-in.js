@@ -1,37 +1,71 @@
 import './Sign-in.css'
 import Logo from '../../static/images/unopass-blue-logo.png'
 import Favicon from '../../static/images/favicon.png'
-import { useState } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import Authcontext from '../../context/AuthProvider'
 
 
 const SignIn = () => {
 
-    const [formData, setFormData] = useState({
-        fullName: "",
-        safeKey: "",
-        password: "",
-    })
+	const { setAuth } = useContext(Authcontext)
+	const userRef = useRef()
+	const errRef = useRef()
+ 
+	const [user, setUser] = useState('')
+	const [password, setPassword] = useState('')
+	const [errMssg, setErrMssg] = useState('')
+	const [success, setSuccess] = useState(false)
+
+	useEffect(() => {
+		userRef.current.focus();
+	}, []);
+  
+	useEffect(() => {
+		setErrMssg('');
+	}, [user, password])
 
 
-    const handleChange = (event) => {
-        const { name, value, type, checked } = event.target
-        setFormData(prevFormData => {
-            return {
-                ...prevFormData,
-                [name]: (type === 'checkbox')? checked: value
-            }
-        })
-    }
+	// handleSUbmit Function
+	const handleSubmit = async (e) => {
+      e.preventDefault();
+		
+      fetch('https://unopass-api.herokuapp.com/user/create', {
+         method: 'POST',
+         headers: {
+           'Accept': 'application/json',
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify({
+           password,
+           name: user,
+         })
+      }).then(function(response) {
+         return response.json();
+      }).then(function(data) {
+         console.log(data)
+      })
 
-    const handleSubmit = (event) => {
-        event.preventDefault() // This prevents the form from re-refreshing the form as it is supposed to, by default
-        console.log(formData)
-      }
+		setUser('');
+		setPassword('');
+		setSuccess(true)
+   }
 
 
     return (
+		<>
+		{success ?
+      (
         <section>
+          <h1>You are logged in</h1>
+          <br />
+          <p>
+            <a href="/" >Go to Home</a>
+          </p>
+        </section>
+      )
+      :
+      (<section>
             
             <div className='SignIn'>
                 <div className='SignIn-side-bar'>
@@ -66,65 +100,63 @@ const SignIn = () => {
                             </Link>
                         </div>
                     </nav>
+
+
                     <form 
                         onSubmit={handleSubmit}
                         className='SignIn--form-area' 
-                        >
-                            <h1>Sign in</h1>
-                            <label htmlFor="fullName">Full Name</label><br />
-                            <input 
-                                type="text" 
-                                id="fullName" 
-                                name="fullName" 
-                                onChange={handleChange}
-                                placeholder="Full Name"
-                                value={formData.fullName} 
-                            />
-                            <br/>
-                            <br />
-                            <label htmlFor="safeKey">Safe Key</label><br />
-                            <input 
-                                type="text" 
-                                id="safeKey" 
-                                name="safeKey" 
-                                onChange={handleChange}
-                                placeholder="Safe Key" 
-                                value={formData.safeKey}
-                            />
-                            <br/>
-                            <br/>
-                            <label htmlFor="password">Password</label><br />
-                            <input 
-                                type="password" 
-                                id="password" 
-                                name="password" 
-                                onChange={handleChange}
-                                placeholder="Password" 
-                                value={formData.password}
-                            />
-                            <br/>
-                            <br/>
-                            <Link to='/dashboard' >
-                                <input 
-                                    type="submit" 
-                                    value="Sign in" 
-                                    className='submit' 
-                                />
-                            </Link>
-                            <span>
-                                <a href='/' >
-                                    Cannot sign in?
-                                </a>
-                            </span>
-                            <p>By proceeding, you agree to the 
-                                <a href='/'>Terms of Services
-                                </a> and <a href='/'>Privacy Notice
-                                </a>
-                            </p>
-                    </form> 
-                </div>
+                     >
+								<p ref={errRef} className={errMssg ? "errmsg" : "offscreen"} aria-live="assertive">{errMssg}</p>
+                        <h1>Sign in</h1>
+								<label htmlFor="username">Username:</label>
+								<br />
+              					<input
+              					  	type="text"
+              					  	id="username"
+              					  	ref={userRef}
+              					  	autoComplete="off"
+              					  	onChange={(e) => setUser(e.target.value)}
+              					  	value={user}
+              					  	required
+              					/>
+									<br />
+									<br />
+            				<label htmlFor="password">Password:</label>
+								<br />
+								
+              					<input
+              					  	type="password"
+              					  	id="password"
+              					  	onChange={(e) => setPassword(e.target.value)}
+              					  	value={password} 
+              					  	required
+              					/>
+									<br />
+                        <Link to='/dashboard' >
+                           <input 
+                              type="submit" 
+                              value="Sign in" 
+                              className='submit' 
+                           />
+                        </Link>
+                        <span>
+                           <a href='/' >
+                              Cannot sign in?
+                           </a>
+                        </span>
+                           <p>By proceeding, you agree to the 
+                              <a href='/'>Terms of Services
+                              </a> and <a href='/'>Privacy Notice
+                              </a>
+                           </p>
+                    	</form> 
+                	</div>
             </div>
         </section>
+		  )}
+		</>
+
+        
     )
 }
 

@@ -32,8 +32,8 @@ const Registration = () => {
 	const [passwordType, setPasswordType] = useState("password");
 	const [passwordInput, setPasswordInput] = useState("");
 
-   const [errMssg, setErrMsg] = useState('');
-   const [success, setSucess] = useState(false);
+   const [errMssg, setErrMssg] = useState('');
+   const [success, setSuccess] = useState(false);
 
    useEffect(() => {
       userRef.current.focus();
@@ -65,7 +65,7 @@ const Registration = () => {
 
    // an effect that clears the error message when either of the dependencies changes 
    useEffect(() => {
-      setErrMsg('')
+      setErrMssg('')
    }, [user, email, password])
 
 
@@ -79,7 +79,7 @@ const Registration = () => {
       const v2 = EMAIL_REGEX.test(email)
       const v3 = PASSWORD_REGEX.test(password)
       if (!v1 || !v2 || !v3) {
-         setErrMsg('User already exists');
+         setErrMssg('User already exists');
          return;
       }
       // .......................................
@@ -104,7 +104,7 @@ const Registration = () => {
 		setUser('');
 		setPassword('');
 		setEmail('');
-		setSucess(true)
+		setSuccess(true)
  
    }
 
@@ -168,7 +168,7 @@ const Registration = () => {
    	   	   	   </p>
    	   	   	</div>
 
-   	   	   <div className='Registration--form'>
+   	   	   <div className='Registration--form' >
 						<nav className='Registration--navbar' >
 						 	<img 
 						 	   src={Favicon} 
@@ -268,18 +268,23 @@ const Registration = () => {
    	   	   	   	   aria-describedby = 'pwdnote' // matches the error paragraph id
    	   	   	   	   onFocus = {() => setPasswordFocus(true)}
    	   	   	   	   onBlur = {() => setPasswordFocus(false)}
+									// style={{position: "absolute"}}
    	   	   	   	/>
 
 
 								{/* hide/show password toggle  */}
 								<span onClick={handlePasswordToggle} style={{color:'red', cursor:"pointer"}} >
-									<span style={{fontSize: '13px'}} >
+									<span style={{
+										fontSize: '13px'
+										}} 
+									>
 										<FontAwesomeIcon icon={faEye}/>
 									</span>
-
+								{/* 
 									<span style={{fontSize: '13px'}} >
 										<FontAwesomeIcon icon={faEyeSlash}/>
-									</span>
+									</span> 
+								*/}
 								</span>
 								{/* ----------------------------- */}
 
@@ -303,6 +308,7 @@ const Registration = () => {
    	   	   	   	 	  type="submit" 
    	   	   	   	 	  value="Create Account" 
    	   	   	   	 	  className='submit' 
+										// style={{position: "relative", top: "10px"}}
    	   	   	   	 	/>
    	   	   	   	{/* </Link> */}
 								<br />
