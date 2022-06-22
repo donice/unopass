@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { faCheck, faTimes, faInfoCircle, faEye, faEyeSlash, faCheckCircle, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import axios from 'axios'
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_.]{3,23}$/;
 const EMAIL_REGEX = /^[a-zA-Z][a-zA-Z0-9-_](?=.*[.]).{3,23}$/;
@@ -31,6 +32,8 @@ const Registration = () => {
 	
 	const [passwordType, setPasswordType] = useState("password");
 	const [passwordInput, setPasswordInput] = useState("");
+
+	const [error, setError] = useState(false);
 
    const [errMssg, setErrMssg] = useState('');
    const [success, setSuccess] = useState(false);
@@ -75,37 +78,29 @@ const Registration = () => {
    const handleSubmit = async (e) => {
       e.preventDefault();
 
-      const v1 = USER_REGEX.test(user)
-      const v2 = EMAIL_REGEX.test(email)
-      const v3 = PASSWORD_REGEX.test(password)
-      if (!v1 || !v2 || !v3) {
-         setErrMssg('User already exists');
-         return;
-      }
-      // .......................................
-
-      fetch('https://unopass-api.herokuapp.com/user/create', {
-         method: 'POST',
-         headers: {
+		try {
+			const response = await axios('https://unopass-api.herokuapp.com/user/create', {
+         	method: 'POST',
+         	headers: {
            'Accept': 'application/json',
            'Content-Type': 'application/json',
          },
-         body: JSON.stringify({
+         data: JSON.stringify({
            email,
            password,
            name: user,
          })
-      }).then(function(response) {
-         return response.json();
-      }).then(function(data) {
-         console.log(data)
       })
-
-		setUser('');
-		setPassword('');
-		setEmail('');
-		setSuccess(true)
- 
+			setUser('');
+			setPassword('');
+			setEmail('');
+			setSuccess(true)
+			console.log(response, 'hello world')
+		} catch(err) {
+			console.log(err, 'Another erroe')
+			setError(true)
+			setErrMssg(err.response.data.detail)
+		}
    }
 
 	//handlePasswordToggle function 
