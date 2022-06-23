@@ -160,90 +160,26 @@
     .SignIn--navbar button {
         display: none;
     }
-    
-    
-    .SignIn--btn {
-        background-color: white;
-        border: 1px solid white;
-        color: #0572ec;
-        box-shadow: 1px 1px 10px 1px rgb(224, 223, 223);
-    }
-    
-    .SignIn--btn:hover {
-        background-color: #0a7800;
-        color: #fff;
-        border: 1px solid #0a7800;
-    }
-    
-    .SignIn {
-        /* border: 1px solid red; */
-        display: flex;
-        background-color: #f7f7f7;
-        color: #000;
-    }
-    
+
     .SignIn-side-bar {
         display: none;
     }
     
-    .SignIn--form {
-        margin: auto;
-        /* border: 1px solid red; */
-        padding: 20px;
-    }
-    
-    .SignIn--form h1 {
-        font-size: 30px;
-        text-align: center;
-        width: 310px;
-        /* border: 1px solid red; */
-    }
-    
-    .SignIn--form-area {
-        background-color: white;
-        padding: 10px 30px 30px 30px; 
-        border-radius: 10px;
-        box-shadow: 1px 10px 10px 1px rgb(224, 223, 223);
-        /* border: 1px solid red; */
-        width: 250;
-        margin: auto 0;
-    }
-    
     .SignIn--form-area input {
         width: 290px;
-        height: 35px;
-        border: 1px solid #dfdddd;
-        border-radius: 5px;
-        margin: 5px auto;
-        padding: 0px 10px;
     }
-    
-    .SignIn--form-area input:hover {
-        border: 1px solid #0572ec;
-        box-shadow: 1px 1px 10px 1px rgb(211, 209, 209);
-    }
-    
-    .SignIn--form-area label {
-       text-align: left;
-    }
-    
+
     .SignIn--form-area .submit {
-        background-color: #0572ec;
-        width: 150px;
-        height: 40px;
-        color: white;
-        border-radius: 50px;
+        width: 190px;
+        margin-top: 20px;
     }
     
     .SignIn--form-area span a {
-        margin-left: 15px;
+        margin-left: 30px;
         font-size: 12px;
         color: #0572ec;
         font-weight: 700;
         text-decoration: none;
-        width: 200px;
-        /* border: 1px solid red; */
-
     }
     
     .SignIn--form-area p {

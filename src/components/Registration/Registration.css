@@ -173,6 +173,15 @@
     text-align: center;
 }
 
+.Registration--form-area span a {
+    text-align: center;
+    font-size: 12px;
+    color: #0572ec;
+    font-weight: 700;
+    text-decoration: none;
+    width: 900px;
+}
+
 /* .................. */
 
 .instructions {
@@ -229,94 +238,24 @@
     .Registration-navbar--favicon {
         display: flex;
         width: 10px;
-        margin: 10px;
+        margin-bottom: 10px;
     }
     
     .Registration--navbar img{
         width: 150px;
     }
     
-    .Registration--navbar button {
-        display: none;
-    }
-    
-    
-    .Registration--btn {
-        background-color: white;
-        border: 1px solid white;
-        color: #0572ec;
-        box-shadow: 1px 1px 10px 1px rgb(224, 223, 223);
-    }
-    
-    .Registration--btn:hover {
-        background-color: #0a7800;
-        color: #fff;
-        border: 1px solid #0a7800;
-    }
-    
-    .Registration {
-        display: flex;
-        background-color: #f7f7f7;
-        color: #000;
-    }
-    
     .Registration-side-bar {
         display: none;
     }
-    
-    .Registration--form {
-        margin: auto;
-        padding: 20px;
-    }
-    
-    .Registration--form h1 {
-        font-size: 30px;
-        text-align: center;
-        width: 310px;
-    }
-    
-    .Registration--form-area {
-        background-color: white;
-        padding: 10px 30px 30px 30px; 
-        border-radius: 10px;
-        box-shadow: 1px 10px 10px 1px rgb(224, 223, 223);
-        width: 250;
-        margin: auto 0;
-    }
-    
+
     .Registration--form-area input {
         width: 290px;
         height: 35px;
-        border: 1px solid #dfdddd;
-        border-radius: 5px;
-        margin: 5px auto;
-        padding: 0px 10px;
-    }
-    
-    .Registration--form-area input:hover {
-        border: 1px solid #0572ec;
-        box-shadow: 1px 1px 10px 1px rgb(211, 209, 209);
-    }
-    
-    .Registration--form-area label {
-       text-align: left;
     }
     
     .Registration--form-area .submit {
-        background-color: #0572ec;
-        width: 150px;
-        height: 40px;
-        color: white;
-        border-radius: 50px;
-    }
-    
-    .Registration--form-area span a {
-        margin-left: 15px;
-        font-size: 12px;
-        color: #0572ec;
-        font-weight: 700;
-        text-decoration: none;
-        width: 200px;
+        width: 190px;
     }
     
     .Registration--form-area p {
