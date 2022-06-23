@@ -7,7 +7,7 @@ const Body = () => {
         <section className='Hero--section'>
             <div className='Hero--info'>
                 <h1>
-                    Nigeria’s number-1 <br/>
+                    Nigeria’s number-1
                     password manager
                 </h1>
                 <p>
