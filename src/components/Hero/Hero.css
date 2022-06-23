@@ -109,7 +109,7 @@
     }
     
     .Hero--section img {
-        width: auto;
+        width: 300px;
         align-items: center;
     }
 }
