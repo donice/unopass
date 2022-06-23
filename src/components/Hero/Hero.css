@@ -69,7 +69,7 @@
 
 @media screen and (max-width: 600px) {
     .Hero {
-        height: auto;
+        height: 100vh;
     }
     
     .Hero--section {
