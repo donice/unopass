@@ -25,6 +25,7 @@
     font-weight: 700;
     line-height: 85px;
     margin: 0;
+    
 }
 
 .Hero--info p {
@@ -69,7 +70,7 @@
 
 @media screen and (max-width: 600px) {
     .Hero {
-        height: 100vh;
+        height: auto;
     }
     
     .Hero--section {
@@ -86,15 +87,15 @@
     }
     
     .Hero--info h1{
-        font-size: 35px;
+        font-size: 4.1em;
         font-weight: 900;
         line-height: 45px;
         margin-top: 20px;
     }
     
     .Hero--info p {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 1.5rem;
+        line-height: 23px;
         text-align:center;
     }
     
@@ -112,6 +113,19 @@
         align-items: center;
     }
 }
+
+@media screen and (max-width: 400px) {
+      
+    .Hero--info h1{
+        font-size: 2.8em;
+        line-height: 35px;
+    }
+    .Hero--info p {
+        font-size: 1.2rem;
+        line-height: 20px;
+    }
+}
+
 
 @media screen and (min-width: 1600px) {
 

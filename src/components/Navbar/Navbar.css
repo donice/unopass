@@ -57,8 +57,23 @@
     }
 
     .navbar button {
+        width: 120px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar img{
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .navbar button {
         width: 100px;
-        height: 35px;
+        height: 40px;
         border-radius: 5px;
         font-size: 14px;
         font-weight: 700;

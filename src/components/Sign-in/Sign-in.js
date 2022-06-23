@@ -32,7 +32,7 @@ const SignIn = () => {
       e.preventDefault();
 		
 		try {
-			const response = await axios('https://unopass-api.herokuapp.com/user/create', {
+			const response = await axios('https://unopass-api.herokuapp.com/login/token', {
          	method: 'POST',
          	headers: {
            'Accept': 'application/json',
