@@ -67,8 +67,8 @@ const SignIn = () => {
         </section>
       )
       :
-      (<section>
-            
+      (
+        <section>          
             <div className='SignIn'>
                 <div className='SignIn-side-bar'>
                     <img src={Favicon} alt='favicon' />
