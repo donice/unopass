@@ -11,8 +11,8 @@ const Body = () => {
                     password manager
                 </h1>
                 <p>
-                    unopass is the easiest way to store and use <br/>
-                    strong passwords. Log in to sites and fill forms <br/>
+                    unopass is the easiest way to store and use 
+                    strong passwords. Log in to sites and fill forms 
                     easily with a single click 
                 </p>
                 <div className='Hero--btn'>
