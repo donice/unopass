@@ -46,7 +46,6 @@
 .Hero--btn button {
     width: 195px;
     height: 50px;
-    border: 1px solid transparent;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 700;
@@ -55,10 +54,12 @@
 .join {
     background-color: #16436c;
     color: white;
+    border: 3px solid #035dc5;
 }
 
 .signin {
     color: #16436c;
+    border: 3px solid #cacaca;
 }
 
 .Hero--section img {

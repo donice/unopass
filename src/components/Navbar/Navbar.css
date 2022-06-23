@@ -4,13 +4,11 @@
 
 .navbar {
     background-color: #0572ec;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     position: sticky;
-    /* border: 1px solid red; */
 }
 
 .navbar img{
@@ -41,6 +39,7 @@
     background-color: white;
     border: 1px solid white;
     color: #0572ec;
+    border: 3px solid #cacaca;
 }
 
 .register-btn:hover {
