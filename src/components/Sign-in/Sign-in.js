@@ -4,6 +4,7 @@ import Favicon from '../../static/images/favicon.png'
 import { useState, useEffect, useRef, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Authcontext from '../../context/AuthProvider'
+import axios from 'axios'
 
 
 const SignIn = () => {
@@ -30,25 +31,26 @@ const SignIn = () => {
 	const handleSubmit = async (e) => {
       e.preventDefault();
 		
-      fetch('https://unopass-api.herokuapp.com/user/create', {
-         method: 'POST',
-         headers: {
+		try {
+			const response = await axios('https://unopass-api.herokuapp.com/user/create', {
+         	method: 'POST',
+         	headers: {
            'Accept': 'application/json',
            'Content-Type': 'application/json',
          },
-         body: JSON.stringify({
-           password,
-           name: user,
+         	data: JSON.stringify({
+           	password,
+           	name: user,
          })
-      }).then(function(response) {
-         return response.json();
-      }).then(function(data) {
-         console.log(data)
       })
-
-		setUser('');
-		setPassword('');
-		setSuccess(true)
+			setUser('');
+			setPassword('');
+			setSuccess(true)
+			console.log(response, 'hello world')
+		} catch(err) {
+			console.log(err, 'Another error')
+			setErrMssg(err.response.data.detail)
+		}
    }
 
 

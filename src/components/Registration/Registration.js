@@ -85,10 +85,10 @@ const Registration = () => {
            'Accept': 'application/json',
            'Content-Type': 'application/json',
          },
-         data: JSON.stringify({
-           email,
-           password,
-           name: user,
+         	data: JSON.stringify({
+           	email,
+           	password,
+           	name: user,
          })
       })
 			setUser('');
@@ -97,7 +97,7 @@ const Registration = () => {
 			setSuccess(true)
 			console.log(response, 'hello world')
 		} catch(err) {
-			console.log(err, 'Another erroe')
+			console.log(err, 'Another error')
 			setError(true)
 			setErrMssg(err.response.data.detail)
 		}
