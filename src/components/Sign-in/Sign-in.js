@@ -31,27 +31,47 @@ const SignIn = () => {
 	const handleSubmit = async (e) => {
       e.preventDefault();
 		
-		try {
-			const response = await axios('https://unopass-api.herokuapp.com/login/token', {
-         	method: 'POST',
-         	headers: {
-           'Accept': 'application/json',
-           'Content-Type': 'application/json',
-         },
-         	data: JSON.stringify({
-           	password,
-           	name: user,
-         })
+		// try {
+		// 	const response = await axios('https://unopass-api.herokuapp.com/login/token', {
+    //      	method: 'POST',
+    //      	headers: {
+    //       //  'Accept': 'application/json',
+    //        'Content-Type': 'multipart/form-data',
+    //      },
+    //      	data: {
+    //        	password,
+    //        	user
+    //      }
+    //   })
+		// 	setUser('');
+		// 	setPassword('');
+		// 	// setSuccess(true)
+		// 	console.log(response, 'hello world')
+		// } catch(err) {
+		// 	console.log(err, 'Another error')
+		// 	setErrMssg(err.response.data.detail)
+		// }
+
+    axios({
+      method: 'post',
+      url: 'https://unopass-api.herokuapp.com/login/token',
+      data: {
+         user, 
+         password
+      },
+      headers: {
+         'Content-Type': 'multipart/form-data' 
+      }
       })
-			setUser('');
-			setPassword('');
-			setSuccess(true)
-			console.log(response, 'hello world')
-		} catch(err) {
-			console.log(err, 'Another error')
-			setErrMssg(err.response.data.detail)
-		}
-   }
+      
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (response) {
+        console.log(response);
+      }
+    );
+  }
 
 
     return (
@@ -134,13 +154,13 @@ const SignIn = () => {
               					  	required
               					/>
 									<br />
-                        <Link to='/dashboard' >
+                        {/* <Link to='/dashboard' > */}
                            <input 
                               type="submit" 
                               value="Sign in" 
                               className='submit' 
                            />
-                        </Link>
+                        {/* </Link> */}
                         <span>
                            <a href='/' >
                               Cannot sign in?
