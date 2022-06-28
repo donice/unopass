@@ -79,7 +79,7 @@ const Registration = () => {
   }, [user, email, password])
 
   //.............................
-
+  
   // handleSubmit function
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -94,9 +94,9 @@ const Registration = () => {
             'Content-Type': 'application/json',
           },
           data: JSON.stringify({
-            email,
-            password,
             name: user,
+            email,
+            password
           }),
         }
       )

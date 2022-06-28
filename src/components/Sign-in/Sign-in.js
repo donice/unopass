@@ -27,31 +27,24 @@ const SignIn = () => {
   // handleSUbmit Function
   const handleSubmit = async (e) => {
     e.preventDefault()
-
-    try {
-      const response = await axios(
-        'https://unopass-api.herokuapp.com/user/create',
-        {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          data: JSON.stringify({
-            email,
-            password,
-            name: user,
-          }),
-        }
-      )
-      setUser('')
-      setPassword('')
-      // setSuccess(true)
-      console.log(response, 'hello world')
-    } catch (err) {
-      console.log(err, 'Another error')
-      setErrMssg(err.response.data.detail)
-    }
+    console.log('Hello World')
+    axios({
+      method: "post",
+      url: "https://unopass-api.herokuapp.com/login/token",
+      data: { 
+        username: user, 
+        password
+      },
+      headers: { "Content-Type": "multipart/form-data" }
+    })
+      .then(function (response) {
+        //handle success
+        console.log(response.data);
+      })
+      .catch(function (response) {
+        //handle error
+        console.log(response);
+      });
   }
 
   return (
@@ -96,13 +89,13 @@ const SignIn = () => {
               </nav>
 
               <form onSubmit={handleSubmit} className="SignIn--form-area">
-                <p
+                {/* <p
                   ref={errRef}
                   className={errMssg ? 'errmsg' : 'offscreen'}
                   aria-live="assertive"
                 >
                   {errMssg}
-                </p>
+                </p> */}
                 <h1>Sign in</h1>
                 <label htmlFor="username">Username:</label>
                 <br />
